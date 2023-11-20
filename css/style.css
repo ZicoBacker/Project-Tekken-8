@@ -90,6 +90,7 @@ div.content h1 {
 }
 div.content p {
   margin: 0;
+  padding: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
