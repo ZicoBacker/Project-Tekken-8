@@ -10,14 +10,27 @@ body {
 }
 
 nav {
-  position: fixed;
-  font-size: 48px;
+  font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.75);
   width: 100vw;
   height: 10vh;
   display: flex;
 }
-nav ul {
+nav a {
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+nav a:hover {
+  color: #dd1d5b;
+  transition: 0.3s;
+}
+
+div.navigation {
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+div.navigation ul {
   display: flex;
   width: 90%;
   height: 100%;
@@ -26,30 +39,22 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-nav a {
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-nav a:hover {
-  color: #dd1d5b;
-  transition: 0.3;
-}
 
 ul#socials {
-  width: 10%;
-  height: 100%;
-}
-ul#socials li {
-  width: 50%;
-  height: 100%;
+  width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  margin: 0;
+}
+ul#socials li a {
+  width: 3rem;
+  padding: 1rem 1rem;
 }
 
 header {
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  position: fixed;
 }
 
 main.container {
@@ -59,11 +64,12 @@ main.container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  bottom: 0;
 }
 main.container section {
   display: flex;
   flex-direction: column;
-  margin-left: 7.5vw;
+  margin-left: 9.75vw;
   width: 35vw;
   height: 100%;
   box-sizing: border-box;
@@ -80,15 +86,7 @@ p {
   font-size: 0.5em;
 }
 
-h1 {
-  margin: 0;
-  color: #dd1d5b;
-  font-size: 1em;
-  display: flex;
-  justify-content: center;
-}
-
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
   margin: 0;
   color: #dd1d5b;
   font-size: 0.75em;
@@ -96,23 +94,17 @@ h2, h3, h4, h5 {
   justify-content: center;
 }
 
-div.content h1 {
-  width: 75%;
-}
-div.content p {
-  margin: 0;
+h1 {
+  font-size: 1em;
 }
 
 .buttons {
   display: flex;
   justify-content: space-evenly;
-  height: 100%;
 }
 .buttons a {
   display: flex;
   align-items: center;
-  width: 40%;
-  height: 20%;
 }
 .buttons a button {
   width: 100%;
@@ -137,6 +129,10 @@ div.content p {
 
 a {
   text-decoration: none;
+}
+
+.darker-background {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style-index.css.map */
