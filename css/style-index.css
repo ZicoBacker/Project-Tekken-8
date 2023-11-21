@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-image: url("../Images/Background2.webp");
   background-size: cover;
+  background-color: #000000;
   font-family: Metropolis, Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 48px;
 }
@@ -25,13 +26,11 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
-a {
+nav a {
   color: #ffffff;
   transition: all 0.5s ease;
 }
-
-a:hover {
+nav a:hover {
   color: #dd1d5b;
   transition: 0.3;
 }
@@ -57,30 +56,42 @@ main.container {
   position: absolute;
   width: 100vw;
   height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 main.container section {
+  display: flex;
+  flex-direction: column;
   margin-left: 7.5vw;
-  width: 25vw;
+  width: 35vw;
   height: 100%;
-  border: 1px dashed #ffffff;
   box-sizing: border-box;
   padding-top: 10vh;
 }
-main.container section div.box {
-  height: 50%;
-  width: 100%;
+main.container section a {
+  height: 20%;
+  margin-top: 15%;
 }
 
 p {
   color: #ffffff;
   font-weight: bold;
-  font-size: 0.75em;
+  font-size: 0.5em;
 }
 
-h1, h2, H3, h4 {
+h1 {
   margin: 0;
   color: #dd1d5b;
   font-size: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+h2, h3, h4, h5 {
+  margin: 0;
+  color: #dd1d5b;
+  font-size: 0.75em;
   display: flex;
   justify-content: center;
 }
@@ -92,4 +103,40 @@ div.content p {
   margin: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.buttons a {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 20%;
+}
+.buttons a button {
+  width: 100%;
+}
+
+.reflective {
+  overflow: hidden;
+  box-shadow: inset 0 0 0.5rem 0.3rem rgba(255, 255, 255, 0);
+  color: #fff;
+  background-color: #2F535F;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style-index.css.map */
