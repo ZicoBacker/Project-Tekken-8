@@ -1,6 +1,7 @@
 header {
   width: 100vw;
   position: fixed;
+  z-index: 2;
 }
 header nav {
   font-size: 3rem;
@@ -42,6 +43,10 @@ header nav a:hover {
   color: #dd1d5b;
   transition: 0.3s;
 }
+header a, header li, header i, header ul {
+  text-decoration: none;
+  list-style: none;
+}
 
 body {
   padding: 0;
@@ -51,9 +56,10 @@ body {
   font-size: 48px;
   width: 100%;
   height: 100%;
+  color: #ffffff;
 }
 
-main.container {
+main {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -63,15 +69,15 @@ main.container {
   background-image: url("../Images/Background2.webp");
   background-size: cover;
 }
-main.container section {
+main section {
   display: flex;
   flex-direction: column;
-  margin-left: 6%;
+  margin-left: 6.4%;
   width: 35%;
-  height: 25vh;
+  min-height: 25vh;
   box-sizing: border-box;
 }
-main.container section a {
+main section a {
   height: 20%;
   margin-top: 15%;
 }
@@ -97,6 +103,7 @@ h1 {
 .buttons {
   display: flex;
   justify-content: space-evenly;
+  z-index: 1;
 }
 .buttons a {
   display: flex;
@@ -121,20 +128,66 @@ h1 {
   cursor: pointer;
   letter-spacing: 1px;
   font-size: 1rem;
-}
-
-a, li, i, ul {
-  text-decoration: none;
-  list-style: none;
+  z-index: 1;
 }
 
 .darker-background {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.lighten-background {
+  background-color: rgba(47, 83, 95, 0.25);
+}
+
+footer {
+  background-color: #000000;
+}
 footer section {
   margin-top: 5vh;
   min-height: 20vh;
+}
+footer section h2 {
+  background-image: url(/Images/Background2.webp);
+}
+
+.container {
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  min-height: 50%;
+  width: 20%;
+  border-radius: 5%;
+  padding: 0.1rem;
+}
+.box p {
+  font-size: 0.5em;
+  text-align: center;
+}
+
+#FAQ h2 {
+  margin-bottom: 5%;
+}
+#FAQ ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#FAQ ul li p {
+  font-size: 0.75em;
+  width: 30vw;
+}
+#FAQ ul li ul {
+  width: 40%;
+  display: flex;
+}
+#FAQ ul li ul li {
+  font-size: 0.75em;
 }
 
 /*# sourceMappingURL=style-index.css.map */

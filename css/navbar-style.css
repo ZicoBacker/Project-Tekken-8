@@ -1,6 +1,7 @@
 header {
   width: 100vw;
   position: fixed;
+  z-index: 2;
 }
 header nav {
   font-size: 3rem;
@@ -41,6 +42,10 @@ header nav a {
 header nav a:hover {
   color: #dd1d5b;
   transition: 0.3s;
+}
+header a, header li, header i, header ul {
+  text-decoration: none;
+  list-style: none;
 }
 
 /*# sourceMappingURL=navbar-style.css.map */

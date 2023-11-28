@@ -6,6 +6,7 @@ $main:  #2F535F;
 header{
     width: 100vw;
     position: fixed;
+    z-index: 2;
     nav{ //the Nice bar ontop of the page
         font-size: 3rem; 
         background-color: rgba($black, 0.75);
@@ -52,4 +53,8 @@ header{
             }
         }
     }
+    a,li,i,ul{// fixes all A makeup
+        text-decoration: none;
+        list-style: none;
+       }
 }
