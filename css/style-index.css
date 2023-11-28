@@ -66,9 +66,9 @@ main.container {
 main.container section {
   display: flex;
   flex-direction: column;
-  margin-left: 9.75%;
+  margin-left: 6%;
   width: 35%;
-  height: 100%;
+  height: 25vh;
   box-sizing: border-box;
 }
 main.container section a {
@@ -133,7 +133,8 @@ a, li, i, ul {
 }
 
 footer section {
-  height: 20vh;
+  margin-top: 5vh;
+  min-height: 20vh;
 }
 
 /*# sourceMappingURL=style-index.css.map */
