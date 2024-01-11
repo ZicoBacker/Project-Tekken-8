@@ -65,6 +65,11 @@ h1{
     letter-spacing: 1px;
     font-size: 1rem;
     z-index: 1;
+
+    a{
+        color:$white;
+        text-decoration: none;
+    }
 }
 
 .darker-background{// for the darker background behind the text
@@ -75,7 +80,7 @@ h1{
     background-color: rgba($color: $main, $alpha: 0.25);
 }
 
-footer,main{// where review and FAQ reside
+main{// where review and FAQ reside
     background-color: $black;
     section { // review and FAQ section
         h2{// funny bar behind the h2 text
@@ -87,10 +92,16 @@ footer,main{// where review and FAQ reside
 }
 
 .box{ // boxes with yapping
-    
     p{
         font-size: 0.5em;
         text-align: center;
     }
+}
+
+.CenterInDiv{
+    display: flex ;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 

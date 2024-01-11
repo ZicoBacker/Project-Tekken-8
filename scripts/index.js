@@ -1,18 +1,4 @@
-//button links to pages
-orderButton = document.getElementById("order");
-infoButton = document.getElementById("info");
-
-orderButton.addEventListener('click', function() {
-    window.open('https://en.bandainamcoent.eu/tekken/tekken-8/shop-now')
-})
-
-infoButton.addEventListener('click', function() {
-    window.open('/info page/info.html')
-})
-
-
-
-//slider
+//slider movement cards
 review = document.querySelectorAll('.review');
 
 let active = Math.floor((review.length)/2);
@@ -49,4 +35,22 @@ next.onclick = function() {
   prev.onclick = function() {
     active = active - 1 >= 0 ? active -1 : active;
     loadShow();
+  }
+
+// FAQ dropdown
+
+let question = document.getElementsByClassName('Question');
+let i;
+
+for (i = 0; i < question.length; i++) {
+    question[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+  
+      let anwser = this.nextElementSibling;
+      if (anwser.style.display === "block") {
+        anwser.style.display = "none";
+      } else {
+        anwser.style.display = "block";
+      }
+    });
   }
