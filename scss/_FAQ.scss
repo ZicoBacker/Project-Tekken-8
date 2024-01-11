@@ -1,0 +1,15 @@
+#FAQ{// FAQ cuz yk my code aint proper,
+    h2{
+        margin-bottom: 5%;
+    }
+
+    ul {
+        list-style: none;
+        
+        li {
+            p:nth-child(2){
+                font-size: small;
+            }
+        }
+    }
+}

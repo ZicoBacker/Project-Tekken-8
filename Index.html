@@ -10,18 +10,16 @@
     </title>
 </head>
 <body>
-    <!-- <img src="Images/Background2.webp" alt="background of page"> -->
     <header>
         <nav>
-            <div class="navigation">
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="Media page/media.html">Media</a></li>
-                    <li><a href="Info page/info.html">Info</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#FAQ">FAQ</a></li>
-                </ul>
-            </div>
+             <ul class="navigation">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Media page/media.html">Media</a></li>
+                <li><a href="Info page/info.html">Info</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+
             <ul id="socials">
                 <li id="twitter">
                     <a href="http://www.twitter.com"><i class='bx bxl-twitter' ></i></a>
@@ -31,52 +29,71 @@
                 </li>
             </ul>
         </nav>
+        <section id="banner">
+            <div class="info">
+                <h2>Fist Meets Fate!</h2>
+                <p>TEKKEN 8 continues the tragic saga of the Mishima bloodline and its world-shaking father-and-son grudge matches. After defeating his father, Heihachi Mishima, Kazuya continues his conquest for global domination, using the forces of G Corporation to wage war on the world. Jin is forced to face his fate head-on as he is reunited with his long-lost mother and seeks to stop his father Kazuya's reign of terror.</p>
+                <div class="buttons">
+                    <button class="reflective" id="order">Order now!</button>
+                    <button class="reflective" id="info">More info</button>
+                </div>
+            </div>
+            <div class="vid">
+                <iframe src="https://www.youtube.com/embed/2hPuRQz6IlM?si=WPwUtowNS0rh7o6C" frameborder="0"> </iframe>
+            </div>
+        </section>
     </header>
 
     <main>
-        <section>
-            <article class="darker-background">
-                <h1>Tekken 8</h1>
-            <p>TEKKEN 8, the brand-new entry in the legendary TEKKEN franchise, brings the fight to the new generation!</p>
-            </article>
-            <article class="darker-background">
-                <h2>Fist Meets Fate!</h2>
-                <p>TEKKEN 8 continues the tragic saga of the Mishima bloodline and its world-shaking father-and-son grudge matches. After defeating his father, Heihachi Mishima, Kazuya continues his conquest for global domination, using the forces of G Corporation to wage war on the world. Jin is forced to face his fate head-on as he is reunited with his long-lost mother and seeks to stop his father Kazuya's reign of terror.</p>
-            </article>
-            <div class="buttons">
-                <a href=""><button class="reflective">PreOrder now!</button></a>
-                <a href=""><button class="reflective">Watch the trailer in HD!</button></a>
-            </div>
-        </section>
-        <section>
-        <iframe width="75%" height="50%" src="https://www.youtube.com/embed/2hPuRQz6IlM?si=WPwUtowNS0rh7o6C" frameborder="0"> </iframe>
-        </section>
-    </main>
-    <footer>
         <section id="reviews">
             <h2>Reviews</h2>
             <div class="container">
-                <div class="box lighten-background">
+                <div class="box review">
                     <h3>Power Unlimited</h3>
                     <p>Tekken 8 is very much Tekken, exactly like you've always known it. Luckily the game knows how to get maximum gain out of seemingly minimal additions, like the flashy Rage Arts, tactical Power Crushes and surprisingly spectacular presence of Street Fighter icon Akuma.</p>
                 </div>
-                <div class="box lighten-background">
+                <div class="box review">
                     <h3>Wired UK</h3>
                     <p>This is the pinnacle of the Tekken series – a joy to play, with a wealth of content, that's as challenging and precise for aficionados as it is inviting and engaging for neophytes. A masterpiece of the fighting genre.</p>
                 </div>
-                <div class="box lighten-background">
+                <div class="box review">
                     <h3>Playstation Official</h3>
                     <p>Welcoming back old hands and encouraging newcomers, Tekken 8 beats its own path and ensures that you want to walk it, kicking various backsides along the way. </p>
                 </div>
-                <div class="box lighten-background">
+                <div class="box review">
                     <h3>IGN</h3>
                     <p>Tekken 8 truly is a hallmark, a fighting game crafted with obvious affection. It strikes a fine balance between accessibility to series newcomers and retaining much of its technical traditions.</p>
                 </div>
+                <div class="box review">
+                    <h3>XGN</h3>
+                    <p>Tekken 7 is the epic conclusion to the Mishima family feud. The game looks great, is fully loaded with characters and offers a lot of modes. And it plays like a charm. It has some minor flaws, but nonetheless this is simply a must-buy.</p>
+                </div>
+
+
+                <button id="next">></button>
+                <button id="prev"><</button>
             </div>
         </section>
+    </main>
+
+    <footer>
         <section id="FAQ"> 
             <h2>FAQ</h2>
             <ul>
+                <li class="lighten-background">
+                    <p>When is the game released?</p>
+                    <p>For the reviewers it is released on the 26th of january 2024</p>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
+
+
+<!-- 
+    <ul>
                 <li class="lighten-background"><p>When is the game coming out?</p>
                     <ul>
                         <li>for the review it is coming out january 26th 2024</li>
@@ -95,7 +112,4 @@
                     </ul>
                 </li>
             </ul>
-        </section>
-    </footer>
-</body>
-</html>
+ -->

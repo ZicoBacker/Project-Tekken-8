@@ -1,23 +1,16 @@
-header {
-  width: 100vw;
-  position: fixed;
-  z-index: 2;
-}
 header nav {
   font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.75);
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   display: flex;
+  position: fixed;
+  z-index: 5;
 }
-header nav div.navigation {
+header nav .navigation {
   display: flex;
+  flex-direction: row;
   width: 80%;
-  height: 100%;
-}
-header nav div.navigation ul {
-  display: flex;
-  width: 90%;
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
@@ -48,6 +41,80 @@ header a, header li, header i, header ul {
   list-style: none;
 }
 
+#banner {
+  padding: 7%;
+  display: flex;
+  justify-content: space-between;
+}
+#banner .info {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 30%;
+  height: fit-content;
+  padding: 1rem;
+  text-wrap: wrap;
+}
+#banner .info .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+#banner .vid {
+  width: 30%;
+  height: 60%;
+}
+#banner .vid iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.review {
+  height: 100%;
+  width: 20%;
+  border-radius: 5%;
+  padding: 0.1rem;
+  position: absolute;
+  text-align: justify;
+  background-color: white;
+  transition: 0.5s;
+  left: 40%;
+  top: 0;
+  background-color: #2F535F;
+}
+
+#next, #prev {
+  position: absolute;
+  top: 40%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 50px;
+}
+
+#next {
+  left: unset;
+  right: 50px;
+}
+
+#FAQ h2 {
+  margin-bottom: 5%;
+}
+#FAQ ul {
+  list-style: none;
+}
+#FAQ ul li p:nth-child(2) {
+  font-size: small;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -59,27 +126,14 @@ body {
   color: #ffffff;
 }
 
-main {
+header {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
-  padding-top: 20vh;
   box-sizing: border-box;
   background-image: url("../Images/Background2.webp");
   background-size: cover;
-}
-main section {
-  display: flex;
-  flex-direction: column;
-  margin-left: 6.4%;
-  width: 35%;
-  min-height: 25vh;
-  box-sizing: border-box;
-}
-main section a {
-  height: 20%;
-  margin-top: 15%;
 }
 
 p {
@@ -98,19 +152,6 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 1em;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-evenly;
-  z-index: 1;
-}
-.buttons a {
-  display: flex;
-  align-items: center;
-}
-.buttons a button {
-  width: 100%;
 }
 
 .reflective {
@@ -139,55 +180,20 @@ h1 {
   background-color: rgba(47, 83, 95, 0.25);
 }
 
-footer {
+footer, main {
   background-color: #000000;
 }
-footer section {
-  margin-top: 5vh;
-  min-height: 20vh;
+footer section, main section {
+  margin-top: 3%;
+  min-height: 20%;
 }
-footer section h2 {
+footer section h2, main section h2 {
   background-image: url(/Images/Background2.webp);
 }
 
-.container {
-  margin-top: 2.5%;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  min-height: 50%;
-  width: 20%;
-  border-radius: 5%;
-  padding: 0.1rem;
-}
 .box p {
   font-size: 0.5em;
   text-align: center;
-}
-
-#FAQ h2 {
-  margin-bottom: 5%;
-}
-#FAQ ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#FAQ ul li p {
-  font-size: 0.75em;
-  width: 30vw;
-}
-#FAQ ul li ul {
-  width: 40%;
-  display: flex;
-}
-#FAQ ul li ul li {
-  font-size: 0.75em;
 }
 
 /*# sourceMappingURL=style-index.css.map */

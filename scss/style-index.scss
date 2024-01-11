@@ -3,6 +3,9 @@ $white: #ffffff;
 $title: #dd1d5b;
 $main:  #2F535F;
 @use "navbar-style";
+@use "Banner";
+@use "slider";
+@use "FAQ";
 
 body { //early on out information for the whole webpage.
     padding: 0;
@@ -16,30 +19,15 @@ body { //early on out information for the whole webpage.
     color: $white
 }
 
-main{ // basically the header but I started crying trying to fix it so it is what it is
+header{
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
-    padding-top: 20vh;
     box-sizing: border-box;
     background-image: url("../Images/Background2.webp");
     background-size: cover;
 
-    section{// two halves of the page
-        display: flex;
-        flex-direction: column;
-        margin-left: 6.4%;
-        width: 35%;
-        min-height: 25vh;
-        // border: 1px dashed $white;
-        box-sizing: border-box;
-        // padding-top: 20vh;
-        a{
-            height: 20%;
-            margin-top: 15%;
-        }
-    }
 }
 
 p{// text to white
@@ -60,18 +48,6 @@ h1{
     font-size: 1em;
 }
 
-.buttons{ // button poistioning
-    display: flex;
-    justify-content: space-evenly;
-    z-index: 1;
-    a{
-        display: flex;
-        align-items: center;
-        button{
-            width: 100%;
-        }
-    }   
-}
 
 .reflective {// button makeup
     overflow: hidden;
@@ -99,58 +75,22 @@ h1{
     background-color: rgba($color: $main, $alpha: 0.25);
 }
 
-footer{// where review and FAQ reside
+footer,main{// where review and FAQ reside
     background-color: $black;
     section { // review and FAQ section
         h2{// funny bar behind the h2 text
             background-image: url(/Images/Background2.webp);
         }
-        margin-top: 5vh;
-        min-height: 20vh;
+        margin-top: 3%;
+        min-height: 20%;
     }
 }
 
-.container{// container for the boxes
-    margin-top: 2.5%;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
 .box{ // boxes with yapping
-    display: flex;
-    flex-direction: column;
-    min-height: 50%;
-    width: 20%;
-    border-radius: 5%;
-    padding: 0.1rem;
     
     p{
         font-size: 0.5em;
         text-align: center;
-    }
-}
-
-#FAQ{// FAQ cuz yk my code aint proper,
-    h2{
-        margin-bottom: 5%;
-    }
-    ul{
-        li{ // making the awnsers appear behind the questions
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            p{// smaller fotn and making boxes smoll
-                font-size: 0.75em;
-                width: 30vw;
-            }
-            ul{// so the text can be behind the question and I don't have to cry abouti it.
-                width: 40%;
-                display: flex;
-                li{ //smaller text
-                    font-size: 0.75em;
-                }
-            }
-        }
     }
 }
 
