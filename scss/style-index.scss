@@ -7,11 +7,11 @@ $main:  #2F535F;
 @use "slider";
 @use "FAQ";
 
-body { //early on out information for the whole webpage.
+body {
     padding: 0;
     margin: 0;
     
-    background-color: $black;
+    // background-color: $black;
     font-family: Metropolis,Gotham,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 48px;
     width: 100%;
@@ -21,7 +21,7 @@ body { //early on out information for the whole webpage.
 
 header{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -30,19 +30,18 @@ header{
 
 }
 
-p{// text to white
+p{
     color:$white;
     font-weight: bold;
     font-size: 0.5em;
 }
 
 
-h1,h2,h3,h4,h5{//titles  coloring and center of the element
+h1,h2,h3,h4,h5{
     margin: 0;
     color:$title;
     font-size: 0.75em;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 h1{
     font-size: 1em;
@@ -72,31 +71,35 @@ h1{
     }
 }
 
-.darker-background{// for the darker background behind the text
-    background-color: rgba($color: $black, $alpha: 0.5);
-}
 
-.lighten-background{// for the lighter green background behind the text
-    background-color: rgba($color: $main, $alpha: 0.25);
-}
 
-main{// where review and FAQ reside
-    background-color: $black;
-    section { // review and FAQ section
-        h2{// funny bar behind the h2 text
-            background-image: url(/Images/Background2.webp);
+//  REDO SECTIONS FOR CLEANER LOOK
+    section {
+        min-height: 60vh;
+
+        h2{
+            background-color: $title;
+            width: 100%;
+            color: $white;
+
         }
-        margin-top: 3%;
-        min-height: 20%;
+
+        &#reviews{
+            background-image: url(/Images/Background1.png);
+        }
+
+        &#FAQ{
+            background-image: url(/Images/background3.jpg);
+        }
     }
+
+h3{
+    background-color: $title;
+    color: $white;
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
-.box{ // boxes with yapping
-    p{
-        font-size: 0.5em;
-        text-align: center;
-    }
-}
 
 .CenterInDiv{
     display: flex ;
@@ -105,3 +108,7 @@ main{// where review and FAQ reside
     justify-content: center !important;
 }
 
+.background{
+    background-attachment: fixed;
+    background-size: cover;
+}

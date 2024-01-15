@@ -59,15 +59,15 @@ header a, header li, header i, header ul {
 }
 #banner .vid {
   width: 30%;
-  height: 60%;
+  height: 50%;
 }
 #banner .vid iframe {
   height: 100%;
   width: 100%;
 }
 
-.container {
-  margin: 2rem 0 2rem 0;
+.review-wrapper {
+  margin-top: 2rem;
   position: relative;
   width: 100%;
   height: 440px;
@@ -86,6 +86,10 @@ header a, header li, header i, header ul {
   left: 40%;
   top: 0;
   background-color: #2F535F;
+}
+.review p {
+  font-size: 0.5em;
+  text-align: center;
 }
 
 #next, #prev {
@@ -113,6 +117,7 @@ header a, header li, header i, header ul {
 }
 #FAQ ul {
   margin: 0 5rem 0 5rem;
+  padding: 1rem;
 }
 #FAQ ul li {
   margin: 1rem;
@@ -124,8 +129,9 @@ header a, header li, header i, header ul {
 .Question {
   width: 100%;
   height: 100%;
+  padding: 1rem;
   font-size: 3rem;
-  background-color: rgba(47, 83, 95, 0.25);
+  background-color: rgba(47, 83, 95, 0.6);
   text-align: start;
   outline: none;
   border: none;
@@ -133,16 +139,16 @@ header a, header li, header i, header ul {
   color: #ffffff;
 }
 .Question:hover {
-  background-color: rgba(47, 83, 95, 0.4);
+  background-color: rgba(47, 83, 95, 0.8);
 }
 .Question::after {
   content: "+";
   position: absolute;
-  right: 7rem;
+  right: 8rem;
 }
 .Question.active {
   border-radius: 1rem 1rem 0 0 !important;
-  background-color: rgba(47, 83, 95, 0.4);
+  background-color: rgba(47, 83, 95, 0.7);
 }
 .Question.active::after {
   content: "-" !important;
@@ -150,7 +156,7 @@ header a, header li, header i, header ul {
 
 .anwser {
   padding: 1rem 0 1rem 1rem;
-  background-color: rgba(47, 83, 95, 0.5);
+  background-color: #2f535f;
   display: none;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -161,7 +167,6 @@ header a, header li, header i, header ul {
 body {
   padding: 0;
   margin: 0;
-  background-color: #000000;
   font-family: Metropolis, Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 48px;
   width: 100%;
@@ -171,7 +176,7 @@ body {
 
 header {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -189,8 +194,7 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   color: #dd1d5b;
   font-size: 0.75em;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 h1 {
@@ -219,28 +223,26 @@ h1 {
   text-decoration: none;
 }
 
-.darker-background {
-  background-color: rgba(0, 0, 0, 0.5);
+section {
+  min-height: 60vh;
+}
+section h2 {
+  background-color: #dd1d5b;
+  width: 100%;
+  color: #ffffff;
+}
+section#reviews {
+  background-image: url(/Images/Background1.png);
+}
+section#FAQ {
+  background-image: url(/Images/background3.jpg);
 }
 
-.lighten-background {
-  background-color: rgba(47, 83, 95, 0.25);
-}
-
-main {
-  background-color: #000000;
-}
-main section {
-  margin-top: 3%;
-  min-height: 20%;
-}
-main section h2 {
-  background-image: url(/Images/Background2.webp);
-}
-
-.box p {
-  font-size: 0.5em;
-  text-align: center;
+h3 {
+  background-color: #dd1d5b;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 .CenterInDiv {
@@ -248,6 +250,11 @@ main section h2 {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+.background {
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style-index.css.map */
