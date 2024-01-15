@@ -87,6 +87,9 @@ header a, header li, header i, header ul {
   top: 0;
   background-color: #2F535F;
 }
+.review h3 {
+  min-width: 80%;
+}
 .review p {
   font-size: 0.5em;
   text-align: center;
@@ -126,42 +129,30 @@ header a, header li, header i, header ul {
   text-decoration: none;
 }
 
-.Question {
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  font-size: 3rem;
+.faq {
   background-color: rgba(47, 83, 95, 0.6);
-  text-align: start;
-  outline: none;
-  border: none;
+  padding: 1rem;
   border-radius: 1rem;
-  color: #ffffff;
+  transition: ease-in-out 0.25s;
 }
-.Question:hover {
-  background-color: rgba(47, 83, 95, 0.8);
-}
-.Question::after {
+.faq summary::after {
   content: "+";
   position: absolute;
   right: 8rem;
 }
-.Question.active {
-  border-radius: 1rem 1rem 0 0 !important;
-  background-color: rgba(47, 83, 95, 0.7);
-}
-.Question.active::after {
-  content: "-" !important;
-}
-
-.anwser {
-  padding: 1rem 0 1rem 1rem;
-  background-color: #2f535f;
-  display: none;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  border-radius: 0 0 1rem 1rem;
+.faq p {
   font-size: 2rem;
+  padding: 1rem 0 1rem 1rem;
+  margin: 0;
+}
+.faq[open] {
+  background-color: #2f535f !important;
+}
+.faq[open] summary::after {
+  content: "-";
+}
+.faq:hover {
+  background-color: rgba(47, 83, 95, 0.7);
 }
 
 body {
