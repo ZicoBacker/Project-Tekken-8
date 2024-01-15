@@ -6,22 +6,19 @@
     <link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style-index.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <title>Tekken 8
-    </title>
+    <title>Tekken 8</title>
 </head>
 <body>
-    <!-- <img src="Images/Background2.webp" alt="background of page"> -->
     <header>
         <nav>
-            <div class="navigation">
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="Media page/media.html">Media</a></li>
-                    <li><a href="Info page/info.html">Info</a></li>
-                    <li><a href="">Reviews</a></li>
-                    <li><a href="">FAQ</a></li>
-                </ul>
-            </div>
+             <ul class="navigation">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Media page/media.html">Media</a></li>
+                <li><a href="Info page/info.html">Info</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+
             <ul id="socials">
                 <li id="twitter">
                     <a href="http://www.twitter.com"><i class='bx bxl-twitter' ></i></a>
@@ -31,26 +28,93 @@
                 </li>
             </ul>
         </nav>
-    </header>
-
-    <main class="container">
-        <section>
-            <article class="darker-background">
-                <h1>Tekken 8</h1>
-            <p>TEKKEN 8, the brand-new entry in the legendary TEKKEN franchise, brings the fight to the new generation!</p>
-            </article>
-            <article class="darker-background">
+        <section id="banner">
+            <div class="info">
                 <h2>Fist Meets Fate!</h2>
                 <p>TEKKEN 8 continues the tragic saga of the Mishima bloodline and its world-shaking father-and-son grudge matches. After defeating his father, Heihachi Mishima, Kazuya continues his conquest for global domination, using the forces of G Corporation to wage war on the world. Jin is forced to face his fate head-on as he is reunited with his long-lost mother and seeks to stop his father Kazuya's reign of terror.</p>
-            </article>
-            <div class="box buttons darker">
-                <a href=""><button class="reflective">PreOrder now!</button></a>
-                <a href=""><button class="reflective">Watch the trailer in HD!</button></a>
+                <div class="buttons">
+                    <button class="reflective" id="order"><a href="https://en.bandainamcoent.eu/tekken/tekken-8/shop-now">Order now!</a></button>
+                    <button class="reflective" id="info"><a href="/info page/info.html">More info</a></button>
+                </div>
+            </div>
+            <div class="vid">
+                <iframe src="https://www.youtube.com/embed/2hPuRQz6IlM?si=WPwUtowNS0rh7o6C" frameborder="0"> </iframe>
             </div>
         </section>
-        <section>
-        <iframe width="75%" height="50%" src="https://www.youtube.com/embed/2hPuRQz6IlM?si=WPwUtowNS0rh7o6C" frameborder="0"> </iframe>
+    </header>
+
+    <main>
+        <section id="reviews" class="background">
+            <h2>Reviews</h2>
+            <div class="review-wrapper">
+                <div class="review CenterInDiv">
+                    <h3>Power Unlimited</h3>
+                    <p>Tekken 8 is very much Tekken, exactly like you've always known it. Luckily the game knows how to get maximum gain out of seemingly minimal additions, like the flashy Rage Arts, tactical Power Crushes and surprisingly spectacular presence of Street Fighter icon Akuma.</p>
+                </div>
+                <div class="review CenterInDiv">
+                    <h3>Wired UK</h3>
+                    <p>This is the pinnacle of the Tekken series – a joy to play, with a wealth of content, that's as challenging and precise for aficionados as it is inviting and engaging for neophytes. A masterpiece of the fighting genre.</p>
+                </div>
+                <div class="review CenterInDiv">
+                    <h3>Playstation Official</h3>
+                    <p>Welcoming back old hands and encouraging newcomers, Tekken 8 beats its own path and ensures that you want to walk it, kicking various backsides along the way. </p>
+                </div>
+                <div class="review CenterInDiv">
+                    <h3>IGN</h3>
+                    <p>Tekken 8 truly is a hallmark, a fighting game crafted with obvious affection. It strikes a fine balance between accessibility to series newcomers and retaining much of its technical traditions.</p>
+                </div>
+                <div class="review CenterInDiv">
+                    <h3>XGN</h3>
+                    <p>Tekken 7 is the epic conclusion to the Mishima family feud. The game looks great, is fully loaded with characters and offers a lot of modes. And it plays like a charm. It has some minor flaws, but nonetheless this is simply a must-buy.</p>
+                </div>
+
+
+                <button id="next">></button>
+                <button id="prev"><</button>
+            </div>
+        </section>
+        <section id="FAQ" class="background"> 
+            <h2>FAQ</h2>
+            <ul>
+                <li>
+                    <details class="faq">
+                        <summary>When will the game be released?</summary>
+                        <p>The will be released to reviewers on January 26th 2024</p>
+                    </details>
+                </li>
+                <li>
+                    <details class="faq">
+                        <summary>Where will the game be available for purchase?</summary>
+                        <p>It will be available on every console and <a href="https://store.steampowered.com/app/1778820/TEKKEN_8/">steam</a>.</p>
+                    </details>
+                </li>
+                <li>
+                    <details class="faq">
+                        <summary>How much will the game cost on release?</summary>
+                        <p>TEKKEN 8 will cost &euro;69.95 on release.</p>
+                    </details>
+                </li>
+                <li>
+                    <details class="faq">
+                        <summary>Will TEKKEN8 have crossplay?</summary>
+                        <p>There will be crossplay between pc xbox and Playstation</p>
+                    </details>
+                </li>
+                <li>
+                    <details class="faq">
+                        <summary>What are the Minimum requirements?</summary>
+                        <p>the minimum is the following: <br>
+                            Operating system: windows 10 <br>
+                            CPU: intel i5-6th gen / ryzen 5 1600 <br>
+                            RAM: 8gb <br>
+                            GPU: GTX 1050Ti / AMD radeon r9 380x <br>
+                            DirectX: Version 12 <br>
+                            Storage: 100gb <br></p>
+                    </details>
+                </li>
+            </ul>
         </section>
     </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

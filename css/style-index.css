@@ -1,22 +1,16 @@
-header {
-  width: 100%;
-  position: fixed;
-}
 header nav {
   font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.75);
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   display: flex;
+  position: fixed;
+  z-index: 5;
 }
-header nav div.navigation {
+header nav .navigation {
   display: flex;
+  flex-direction: row;
   width: 80%;
-  height: 100%;
-}
-header nav div.navigation ul {
-  display: flex;
-  width: 90%;
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
@@ -42,39 +36,143 @@ header nav a:hover {
   color: #dd1d5b;
   transition: 0.3s;
 }
+header a, header li, header i, header ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+#banner {
+  padding: 7%;
+  display: flex;
+  justify-content: space-between;
+}
+#banner .info {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 30%;
+  height: fit-content;
+  padding: 1rem;
+  text-wrap: wrap;
+}
+#banner .info .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+#banner .vid {
+  width: 30%;
+  height: 50%;
+}
+#banner .vid iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.review-wrapper {
+  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.review {
+  height: 90%;
+  width: 20%;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: absolute;
+  text-align: justify;
+  background-color: white;
+  transition: 0.5s;
+  left: 40%;
+  top: 0;
+  background-color: #2F535F;
+}
+.review h3 {
+  min-width: 80%;
+}
+.review p {
+  font-size: 0.5em;
+  text-align: center;
+}
+
+#next, #prev {
+  position: absolute;
+  top: 40%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 50px;
+}
+
+#next {
+  left: unset;
+  right: 50px;
+}
+
+#FAQ h2 {
+  margin-bottom: 5%;
+}
+#FAQ * {
+  list-style: none;
+}
+#FAQ ul {
+  margin: 0 5rem 0 5rem;
+  padding: 1rem;
+}
+#FAQ ul li {
+  margin: 1rem;
+}
+#FAQ a {
+  text-decoration: none;
+}
+
+.faq {
+  background-color: rgba(47, 83, 95, 0.6);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: ease-in-out 0.25s;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 8rem;
+}
+.faq p {
+  font-size: 2rem;
+  padding: 1rem 0 1rem 1rem;
+  margin: 0;
+}
+.faq[open] {
+  background-color: #2f535f !important;
+}
+.faq[open] summary::after {
+  content: "-";
+}
+.faq:hover {
+  background-color: rgba(47, 83, 95, 0.7);
+}
 
 body {
-  width: 100vw;
-  height: 100vh;
+  padding: 0;
   margin: 0;
-  background-image: url("../Images/Background2.webp");
-  background-size: cover;
-  background-color: #000000;
   font-family: Metropolis, Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 48px;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
 }
 
-main.container {
-  position: absolute;
-  width: 100vw;
-  height: 90vh;
+header {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  bottom: 0;
-}
-main.container section {
-  display: flex;
-  flex-direction: column;
-  margin-left: 9.75vw;
-  width: 35vw;
-  height: 100%;
   box-sizing: border-box;
-  padding-top: 10vh;
-}
-main.container section a {
-  height: 20%;
-  margin-top: 15%;
+  background-image: url("../Images/Background2.webp");
+  background-size: cover;
 }
 
 p {
@@ -87,24 +185,11 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   color: #dd1d5b;
   font-size: 0.75em;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 h1 {
   font-size: 1em;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-evenly;
-}
-.buttons a {
-  display: flex;
-  align-items: center;
-}
-.buttons a button {
-  width: 100%;
 }
 
 .reflective {
@@ -122,14 +207,45 @@ h1 {
   cursor: pointer;
   letter-spacing: 1px;
   font-size: 1rem;
+  z-index: 1;
 }
-
-a, li, i {
+.reflective a {
+  color: #ffffff;
   text-decoration: none;
 }
 
-.darker-background {
-  background-color: rgba(0, 0, 0, 0.5);
+section {
+  min-height: 60vh;
+}
+section h2 {
+  background-color: #dd1d5b;
+  width: 100%;
+  color: #ffffff;
+}
+section#reviews {
+  background-image: url(/Images/Background1.png);
+}
+section#FAQ {
+  background-image: url(/Images/background3.jpg);
+}
+
+h3 {
+  background-color: #dd1d5b;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.CenterInDiv {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.background {
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style-index.css.map */

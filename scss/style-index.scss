@@ -3,72 +3,50 @@ $white: #ffffff;
 $title: #dd1d5b;
 $main:  #2F535F;
 @use "navbar-style";
+@use "Banner";
+@use "slider";
+@use "FAQ";
 
-body {// establishes body takes up 100% of the page
-    width: 100vw;
-    height: 100vh;
+body {
+    padding: 0;
     margin: 0;
-    background-image: url("../Images/Background2.webp");
-    background-size: cover;
-    background-color: $black;
+    
+    // background-color: $black;
     font-family: Metropolis,Gotham,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 48px;
+    width: 100%;
+    height: 100%;
+    color: $white
 }
 
-main.container {
-    position: absolute;
-    width: 100vw;
-    height: 90vh;
+header{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    bottom: 0;
+    box-sizing: border-box;
+    background-image: url("../Images/Background2.webp");
+    background-size: cover;
 
-    section{
-        display: flex;
-        flex-direction: column;
-        margin-left: 9.75vw;
-        width: 35vw;
-        height: 100%;
-        // border: 1px dashed $white;
-        box-sizing: border-box;
-        padding-top: 10vh;
-        a{
-            height: 20%;
-            margin-top: 15%;
-        }
-    }
 }
 
-p{// text
+p{
     color:$white;
     font-weight: bold;
     font-size: 0.5em;
 }
 
 
-h1,h2,h3,h4,h5{//titles 
+h1,h2,h3,h4,h5{
     margin: 0;
     color:$title;
     font-size: 0.75em;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 h1{
     font-size: 1em;
 }
 
-.buttons{ // button poistioning
-    display: flex;
-    justify-content: space-evenly;
-    a{
-        display: flex;
-        align-items: center;
-        button{
-            width: 100%;
-        }
-    }   
-}
 
 .reflective {// button makeup
     overflow: hidden;
@@ -85,12 +63,52 @@ h1{
     cursor: pointer;
     letter-spacing: 1px;
     font-size: 1rem;
+    z-index: 1;
+
+    a{
+        color:$white;
+        text-decoration: none;
+    }
 }
 
-a,li,i{// fixes all A makeup
- text-decoration: none;
+
+
+//  REDO SECTIONS FOR CLEANER LOOK
+    section {
+        min-height: 60vh;
+
+        h2{
+            background-color: $title;
+            width: 100%;
+            color: $white;
+
+        }
+
+        &#reviews{
+            background-image: url(/Images/Background1.png);
+        }
+
+        &#FAQ{
+            background-image: url(/Images/background3.jpg);
+        }
+    }
+
+h3{
+    background-color: $title;
+    color: $white;
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
-.darker-background{// for the darker background behind the text
-    background-color: rgba($color: $black, $alpha: 0.5);
+
+.CenterInDiv{
+    display: flex ;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.background{
+    background-attachment: fixed;
+    background-size: cover;
 }

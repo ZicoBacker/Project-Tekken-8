@@ -1,0 +1,55 @@
+$black: #000000;
+$white: #ffffff;
+$title: #dd1d5b;
+$main:  #2F535F;
+
+#FAQ{// FAQ cuz yk my code aint proper,
+    h2{
+        margin-bottom: 5%;
+    }
+
+    *{
+        list-style: none;
+    }
+    ul{
+    margin: 0 5rem 0 5rem;
+    padding: 1rem;
+        li{
+            margin: 1rem;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+.faq{
+    background-color: rgba($main, 0.6);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: ease-in-out 0.25s;
+
+    summary::after{
+        content: "+";
+        position: absolute;
+        right: 8rem;
+    }
+
+    p{
+        font-size: 2rem; 
+        padding: 1rem 0 1rem 1rem;
+        margin: 0; 
+    }
+
+    &[open]{
+        background-color: rgba($main, 1) !important;
+
+        summary::after{
+            content: "-";
+        }
+    }
+
+    &:hover{
+        background-color: rgba($main, 0.7);
+    }
+}

@@ -1,0 +1,31 @@
+$black: #000000;
+$white: #ffffff;
+$title: #dd1d5b;
+$main:  #2F535F;
+
+#banner{
+    padding: 7%;
+    display: flex;
+    justify-content: space-between;
+
+    .info{
+        background-color: rgba($black, 0.5);
+        width: 30%;
+        height: fit-content;
+        padding: 1rem;
+        text-wrap: wrap;
+        .buttons{
+            display:flex;
+            justify-content: space-around;
+        }
+    }
+    
+    .vid{
+        width: 30%;
+        height: 50%;
+        iframe{
+            height:100%;
+            width: 100%;
+        }
+    }
+}
